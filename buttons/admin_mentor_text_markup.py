@@ -1,0 +1,1 @@
+from aiogram.types import KeyboardButtonfrom configs.emojis import *SETTINGS_BUTTON_TEXT = F'{SETTINGS} Settings'SETTINGS_BUTTON = KeyboardButton(text=SETTINGS_BUTTON_TEXT)STUDENTS_BUTTON_TEXT = F'{STUDENTS} Students'STUDENTS_BUTTON = KeyboardButton(text=STUDENTS_BUTTON_TEXT)

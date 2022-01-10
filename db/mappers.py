@@ -1,0 +1,1 @@
+from db import Userdef dict_to_user(data: dict) -> User:	return User(		chat_id=data.get('chat_id'),		name=data.get("name"),		phone=data.get("phone_number").get("phone_number"),		role='STUDENT',		age=data.get('age'),		language=data.get('lang')	)

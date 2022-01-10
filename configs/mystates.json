@@ -1,0 +1,18 @@
+{
+    "1328453620": {
+        "1328453620": {
+            "state": "RegisterState:phone_number",
+            "data": {
+                "lang": "uz",
+                "name": "Dilsod",
+                "age": "20",
+                "phone_number": {
+                    "phone_number": "+998915477339",
+                    "first_name": "\u00ab\u00ab\u00ab\u2122CrazyCoder<\u2044>\u2122\u00bb\u00bb\u00bb",
+                    "user_id": 1328453620
+                }
+            },
+            "bucket": {}
+        }
+    }
+}
