@@ -1,1 +1,1 @@
-import uuiddef generate_unique_id():	return str(uuid.uuid4()).replace("-", "")
+import uuiddef generate_unique_id():	return str(uuid.uuid4()).replace("-", "")print(generate_unique_id())

@@ -1,1 +1,1 @@
-from .register_handler import *
+from .register_handler import *from .new_group import *from .my_group import *

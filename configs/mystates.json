@@ -1,16 +1,19 @@
 {
     "1328453620": {
         "1328453620": {
-            "state": "RegisterState:phone_number",
+            "state": "BeginState:begin",
             "data": {
-                "lang": "uz",
-                "name": "Dilsod",
+                "lang": "en",
+                "name": "Dilshod",
                 "age": "20",
                 "phone_number": {
                     "phone_number": "+998915477339",
                     "first_name": "\u00ab\u00ab\u00ab\u2122CrazyCoder<\u2044>\u2122\u00bb\u00bb\u00bb",
                     "user_id": 1328453620
-                }
+                },
+                "chat_id": 1328453620,
+                "group_id": "back",
+                "user_id": "33360102cbc849d6ac688e7d6b0fe39a"
             },
             "bucket": {}
         }

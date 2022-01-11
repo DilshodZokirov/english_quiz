@@ -48,29 +48,18 @@ def location():
 	return ReplyKeyboardMarkup(resize_keyboard=True, keyboard=[row, ], one_time_keyboard=True)
 
 
-#
-# def mentor_menu():
-#     row1: List = [GROUPS_BUTTON, STUDENTS_BUTTON]
-#     row2: List = [QUIZ_BUTTON, CREATE_GROUP_BUTTON]
-#     row3: List = [ACTIVATE_STUDENT_BUTTON, ASSIGN_QUIZ_TO_GROUP_BUTTON]
-#     row5: List = [SETTINGS_BUTTON, ]
-#     keyboard: List = [row1, row2, row3, row5]
-#     return ReplyKeyboardMarkup(resize_keyboard=True, keyboard=keyboard)
-#
-#
-# def my_group():
-#     row4: List = [CREATE_TASK, DELETE_TASK]
-#     # row1: List = [GROUP_INFO]
-#     keyboard: List = [row4]
-#     return ReplyKeyboardMarkup(resize_keyboard=True, keyboard=keyboard)
-#
-#
-# def admin_menu():
-#     row1: List = [GROUPS_BUTTON, STUDENTS_BUTTON]
-#     row2: List = [QUIZ_BUTTON, CREATE_GROUP_BUTTON]
-#     row3: List = [ACTIVATE_STUDENT_BUTTON, SETTINGS_BUTTON]
-#     keyboard: List = [row1, row2, row3]
-#     return ReplyKeyboardMarkup(resize_keyboard=True, keyboard=keyboard)
+MY_GROUP = '👥 My Group'
+NEW_GROUP = '🆕 New Group'
+MY_GROUP_BUTTON = KeyboardButton(text=MY_GROUP)
+NEW_GROUP_BUTTON = KeyboardButton(text=NEW_GROUP)
+
+
+def student_menu():
+	row1: List = [MY_GROUP_BUTTON, NEW_GROUP_BUTTON]
+	row5: List = [SETTINGS_BUTTON]
+	keyboard: List = [row1, row5]
+	return ReplyKeyboardMarkup(resize_keyboard=True, keyboard=keyboard)
+
 
 CUSTOMER_BUTTON = '👗 Kelish Vaqti'
 ARCHIVE = '📓 Arxiv'
@@ -85,16 +74,10 @@ REFRESH = '🔄 Refresh'
 
 
 def my_board_button(chat_id: str):
-	user = User(chat_id).admin_chat_id()
-	row1: List = [CUSTOMER_BUTTON]
-	row2: List = [NEW_PRODUCT, MY_PRODUCT]
-	row3: List = [CUSTOMER_LIST, ARCHIVE]
-	row4: List = [SEAR, ADMIN]
-	keyboard: List = [row1]
-	keyboard2: List = [row2, row3, row4]
-	if not user:
-		return ReplyKeyboardMarkup(resize_keyboard=True, keyboard=keyboard)
-	return ReplyKeyboardMarkup(resize_keyboard=True, keyboard=keyboard2)
+	user: str = User(chat_id=chat_id).registered_user_chat_id()
+	if not user[3].__eq__('ADMIN'):
+		return student_menu()
+	return
 
 
 CREATE = '🔸 Admin Qo\'shish'
